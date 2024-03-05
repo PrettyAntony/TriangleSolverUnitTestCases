@@ -86,5 +86,95 @@ namespace TriangleSolverTest
             Assert.IsNotEmpty(actualResposne);
             Assert.AreEqual(actualResposne, expectedResponse);
         }
+
+        [Test]
+        public void ValidTriangle_Input30and35and40_OutputValidScaleneTriangle()
+        {
+            //Arrange
+            int firstSide = 30;
+            int secondSide = 35;
+            int thirdSide = 40;
+
+            string expectedResponse = "A scalene triangle is formed";
+
+            //Act
+            var actualResposne = Triangle.AnalyzeTriangle(firstSide, secondSide,thirdSide);
+
+            //Asserts
+            Assert.IsNotEmpty(actualResposne);
+            Assert.AreEqual(actualResposne, expectedResponse);
+        }
+
+        [Test]
+        public void ValidTriangle_Input20and22and40_OutputValidScaleneTriangle()
+        {
+            //Arrange
+            int firstSide = 20;
+            int secondSide = 22;
+            int thirdSide = 40;
+
+            string expectedResponse = "A scalene triangle is formed";
+
+            //Act
+            var actualResposne = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            //Asserts
+            Assert.IsNotEmpty(actualResposne);
+            Assert.AreEqual(actualResposne, expectedResponse);
+        }
+
+        [Test]
+        public void ValidTriangle_Input10and12and18_OutputValidScaleneTriangle()
+        {
+            //Arrange
+            int firstSide = 10;
+            int secondSide = 12;
+            int thirdSide = 18;
+
+            string expectedResponse = "A scalene triangle is formed";
+
+            //Act
+            var actualResposne = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            //Asserts
+            Assert.IsNotEmpty(actualResposne);
+            Assert.AreEqual(actualResposne, expectedResponse);
+        }
+
+        [Test]
+        public void ValidTriangle_Input8and9and15_OutputValidScaleneTriangle()
+        {
+            //Arrange
+            int firstSide = 8;
+            int secondSide = 9;
+            int thirdSide = 15;
+
+            string expectedResponse = "A scalene triangle is formed";
+
+            //Act
+            var actualResposne = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            //Asserts
+            Assert.IsNotEmpty(actualResposne);
+            Assert.AreEqual(actualResposne, expectedResponse);
+        }
+
+        [Test]
+        public void ValidTriangle_Input99and88and111_OutputValidScaleneTriangle()
+        {
+            //Arrange
+            int firstSide = 99;
+            int secondSide = 88;
+            int thirdSide = 111;
+
+            string expectedResponse = "A scalene triangle is formed";
+
+            //Act
+            var actualResposne = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            //Asserts
+            Assert.IsNotEmpty(actualResposne);
+            Assert.AreEqual(actualResposne, expectedResponse);
+        }
     }
 }
