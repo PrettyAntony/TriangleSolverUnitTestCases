@@ -68,5 +68,23 @@ namespace TriangleSolverTest
             Assert.IsNotEmpty(actualResposne);
             Assert.AreEqual(actualResposne, expectedResponse);
         }
+
+        [Test]
+        public void ValidTriangle_Input40and35and40_OutputValidIsoscelesTriangle()
+        {
+            //Arrange
+            int firstSide = 40;
+            int secondSide = 35;
+            int thirdSide = 40;
+
+            string expectedResponse = "An isosceles triangle is formed";
+
+            //Act
+            var actualResposne = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            //Asserts
+            Assert.IsNotEmpty(actualResposne);
+            Assert.AreEqual(actualResposne, expectedResponse);
+        }
     }
 }
