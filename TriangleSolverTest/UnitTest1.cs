@@ -176,5 +176,113 @@ namespace TriangleSolverTest
             Assert.IsNotEmpty(actualResposne);
             Assert.AreEqual(actualResposne, expectedResponse);
         }
+
+        [Test]
+        public void InValidTriangle_Input0and8and11_OutputOneSideIsZero()
+        {
+            //Arrange
+            int firstSide = 0;
+            int secondSide = 8;
+            int thirdSide = 11;
+
+            string expectedResponse = "At least one side entered had a zero - invalid triangle";
+
+            //Act
+            var actualResposne = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            //Asserts
+            Assert.IsNotEmpty(actualResposne);
+            Assert.AreEqual(actualResposne, expectedResponse);
+        }
+
+        [Test]
+        public void InValidTriangle_Input9and0and11_OutputOneSideIsZero()
+        {
+            //Arrange
+            int firstSide = 9;
+            int secondSide = 0;
+            int thirdSide = 11;
+
+            string expectedResponse = "At least one side entered had a zero - invalid triangle";
+
+            //Act
+            var actualResposne = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            //Asserts
+            Assert.IsNotEmpty(actualResposne);
+            Assert.AreEqual(actualResposne, expectedResponse);
+        }
+
+        [Test]
+        public void InValidTriangle_Input9and12and0_OutputOneSideIsZero()
+        {
+            //Arrange
+            int firstSide = 9;
+            int secondSide = 12;
+            int thirdSide = 0;
+
+            string expectedResponse = "At least one side entered had a zero - invalid triangle";
+
+            //Act
+            var actualResposne = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            //Asserts
+            Assert.IsNotEmpty(actualResposne);
+            Assert.AreEqual(actualResposne, expectedResponse);
+        }
+
+        [Test]
+        public void InValidTriangle_Input9and10and50_OutputOneSideIsZero()
+        {
+            //Arrange
+            int firstSide = 9;
+            int secondSide = 10;
+            int thirdSide = 50;
+
+            string expectedResponse = "A triangle cannot be formed";
+
+            //Act
+            var actualResposne = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            //Asserts
+            Assert.IsNotEmpty(actualResposne);
+            Assert.AreEqual(actualResposne, expectedResponse);
+        }
+
+        [Test]
+        public void InValidTriangle_Input9and75and15_OutputOneSideIsZero()
+        {
+            //Arrange
+            int firstSide = 9;
+            int secondSide = 75;
+            int thirdSide = 15;
+
+            string expectedResponse = "A triangle cannot be formed";
+
+            //Act
+            var actualResposne = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            //Asserts
+            Assert.IsNotEmpty(actualResposne);
+            Assert.AreEqual(actualResposne, expectedResponse);
+        }
+
+        [Test]
+        public void InValidTriangle_Input90and10and50_OutputOneSideIsZero()
+        {
+            //Arrange
+            int firstSide = 90;
+            int secondSide = 10;
+            int thirdSide = 50;
+
+            string expectedResponse = "A triangle cannot be formed";
+
+            //Act
+            var actualResposne = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            //Asserts
+            Assert.IsNotEmpty(actualResposne);
+            Assert.AreEqual(actualResposne, expectedResponse);
+        }
     }
 }
