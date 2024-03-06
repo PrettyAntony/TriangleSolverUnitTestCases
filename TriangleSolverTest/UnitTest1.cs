@@ -4,17 +4,7 @@ namespace TriangleSolverTest
 {
     public class Tests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
-        [Test]
-        public void Test1()
-        {
-            Assert.Pass();
-        }
-
+        //tests for Equilateral triangle
         [Test]
         public void ValidTriangle_Input30and30and30_OutputValidEquilateralTriangle()
         {
@@ -33,6 +23,7 @@ namespace TriangleSolverTest
             Assert.AreEqual(actualResposne, expectedResponse);
         }
 
+        //tests for Isosceles triangle
         [Test]
         public void ValidTriangle_Input30and30and25_OutputValidIsoscelesTriangle()
         {
@@ -87,6 +78,7 @@ namespace TriangleSolverTest
             Assert.AreEqual(actualResposne, expectedResponse);
         }
 
+        //tests for Scalene triangle
         [Test]
         public void ValidTriangle_Input30and35and40_OutputValidScaleneTriangle()
         {
@@ -177,6 +169,7 @@ namespace TriangleSolverTest
             Assert.AreEqual(actualResposne, expectedResponse);
         }
 
+        //tests for Invalid triangle - one side zero
         [Test]
         public void InValidTriangle_Input0and8and11_OutputOneSideIsZero()
         {
@@ -232,7 +225,7 @@ namespace TriangleSolverTest
         }
 
         [Test]
-        public void InValidTriangle_Input9and10and50_OutputOneSideIsZero()
+        public void InValidTriangle_Input9and10and50_OutputInvalidTraingle()
         {
             //Arrange
             int firstSide = 9;
@@ -250,7 +243,7 @@ namespace TriangleSolverTest
         }
 
         [Test]
-        public void InValidTriangle_Input9and75and15_OutputOneSideIsZero()
+        public void InValidTriangle_Input9and75and15_OutputInvalidTriangle()
         {
             //Arrange
             int firstSide = 9;
@@ -268,7 +261,7 @@ namespace TriangleSolverTest
         }
 
         [Test]
-        public void InValidTriangle_Input90and10and50_OutputOneSideIsZero()
+        public void InValidTriangle_Input90and10and50_OutputInvalidTriangle()
         {
             //Arrange
             int firstSide = 90;
